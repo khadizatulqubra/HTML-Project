@@ -1,0 +1,48 @@
+// Variabler
+$primary-color: #ffb6c1;
+$secondary-color: #ff6f61;
+$text-color: #333;
+
+// Mixin för responsiv design
+@mixin responsive-font($min-size, $max-size) {
+    font-size: $min-size;
+    @media (min-width: 768px) {
+        font-size: $max-size;
+    }
+}
+
+// Styling
+body {
+    font-family: 'Arial', sans-serif;
+    color: $text-color;
+
+}
+
+header {
+    background-color: $secondary-color;
+    padding: 1rem;
+}
+
+#intro {
+    background-color: $primary-color;
+    h2 {
+        @include responsive-font(2rem, 3rem);
+        margin-bottom: 1rem;
+    }
+}
+
+#books, #events {
+    padding: 2rem 0;
+    background-color: lighten($primary-color, 30%);
+}
+
+
+nav ul li a {
+   color:$text-color ;
+
+}
+
+footer {
+    background-color: $secondary-color;
+    padding: 1rem;
+}

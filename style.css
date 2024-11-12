@@ -1,0 +1,38 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+header {
+  background-color: #ff6f61;
+  padding: 1rem;
+}
+
+#intro {
+  background-color: #ffb6c1;
+}
+#intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  #intro h2 {
+    font-size: 3rem;
+  }
+}
+
+#books, #events {
+  padding: 2rem 0;
+  background-color: white;
+}
+
+nav ul li a {
+  color: #333;
+}
+
+footer {
+  background-color: #ff6f61;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
