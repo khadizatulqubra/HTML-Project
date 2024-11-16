@@ -1,24 +1,179 @@
-body {
+@charset "UTF-8";
+/* Variables */
+/* Grundinställningar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f8f6f2;
   color: #333;
 }
 
-header {
-  background-color: #ff6f61;
+/* Header */
+.header {
+  background-color: #fff;
   padding: 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
-#intro {
-  background-color: #ffb6c1;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-#intro h2 {
+
+.logo {
+  font-size: 1.5rem;
+  color: #e30613;
+  font-weight: bold;
+}
+
+
+
+
+.nav-icons a {
+  color: #333;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+/* Navigeringslänkar */
+ .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+} 
+ 
+/* Main Section */
+.main-section {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+.image-container {
+  flex: 1;
+  background-color: #f5f5f5;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.text-container {
+  flex: 1;
+  background-color: #e30613;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.text-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 768px) {
-  #intro h2 {
-    font-size: 3rem;
-  }
+.text-container .cta-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Sektioner */
+.section-books, .section-trending {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.section-books h2, .section-trending h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Kategorikort */
+.book-categories {
+  display: flex;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.category-card {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none; 
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.category-card:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* //våra böker */
+ .book-container{
+  margin-left: 100px;
+}
+.title-1{
+  font-weight: 1000;
+  color: #414040;
+  padding: 5px;
+  font-size: 50px;
+}
+.title-2{
+  font-weight: 500;
+  color: #414040;
+  padding: 5px;
+  font-size: 25px;
+}
+.book-grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 150px;
+  text-align: center;
+}
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.book-card .book-title {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.book-card .book-author {
+  color: #666;
+  font-size: 0.9rem;
 }
 
 #books, #events {
@@ -26,13 +181,127 @@ header {
   background-color: white;
 }
 
-nav ul li a {
-  color: #333;
+.advent-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e30613; 
+  color: #fff; 
+  padding: 2rem;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 100%;
+  margin: 3rem;
+  margin-left: 10rem;
+   
 }
 
-footer {
+.text-section {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.text-section h1 {
+  font-size: 3rem; /* Adjust heading size */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-section .cta-link {
+  font-size: 1.2rem; /* CTA text size */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text for the link */
+  border-bottom: 2px solid #fff; /* Optional underline */
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-section img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  height: auto;
+  transform: rotate(-5deg); /* Tilt the image slightly */
+  border: 4px solid #e30613; /* Border matching the background */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+.image-section-next img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  height: auto;
+  transform: rotate(-10deg); /* Tilt the image slightly */
+  border: 4px solid #e30613; /* Border matching the background */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+
+/* Footer */
+/* footer {
   background-color: #ff6f61;
   padding: 1rem;
+} */
+
+.footer {
+  background-color: #f1301f;
+  color: white;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between; /* Kontakt till vänster, social media till höger */
+  align-items: center; /* Vertikal centrering */
 }
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Placera kontakterna till vänster */
+}
+
+.footer .container-social {
+  display: flex;
+  justify-content: flex-end; /* Placera sociala medier till höger */
+  align-items: center; /* Vertikal centrering */
+}
+
+.footer .container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem; /* Mellanrum mellan ikoner */
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #ccc;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
