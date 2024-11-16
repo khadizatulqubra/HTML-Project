@@ -202,7 +202,7 @@ body {
 }
 
 .text-section h1 {
-  font-size: 3rem; /* Adjust heading size */
+  font-size: 3rem; 
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -210,9 +210,9 @@ body {
 .text-section .cta-link {
   font-size: 1.2rem; /* CTA text size */
   font-weight: bold;
-  text-decoration: none; /* Remove underline */
-  color: #fff; /* White text for the link */
-  border-bottom: 2px solid #fff; /* Optional underline */
+  text-decoration: none;
+  color: #fff; 
+  border-bottom: 2px solid #fff; 
 }
 
 .image-section {
@@ -249,19 +249,19 @@ body {
   color: white;
   padding: 1rem 1rem;
   display: flex;
-  justify-content: space-between; /* Kontakt till vänster, social media till höger */
-  align-items: center; /* Vertikal centrering */
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 .footer .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Placera kontakterna till vänster */
+  align-items: flex-start; 
 }
 
 .footer .container-social {
   display: flex;
-  justify-content: flex-end; /* Placera sociala medier till höger */
+  justify-content: flex-end; 
   align-items: center; /* Vertikal centrering */
 }
 
@@ -282,7 +282,7 @@ body {
 
 .social-icons {
   display: flex;
-  gap: 1rem; /* Mellanrum mellan ikoner */
+  gap: 1rem; 
   align-items: center;
 }
 
