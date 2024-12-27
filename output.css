@@ -347,7 +347,10 @@ button,
 input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
-  -webkit-appearance: button;
+  button {
+    -webkit-appearance: none; /* Vendor-prefix för Safari/Chrome */
+    appearance: none; /* Standardegenskap för moderna webbläsare */
+}
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -388,21 +391,15 @@ Correct the cursor style of increment and decrement buttons in Safari.
   height: auto;
 }
 
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
 
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+
+input {
+  -webkit-appearance: none; /* För Safari/Chrome */
+  -moz-appearance: none; /* För äldre Firefox */
+  appearance: none; /* Standardegenskap */
 }
 
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
+
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -531,11 +528,10 @@ canvas,
 audio,
 iframe,
 embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+.example {
+  display: flex;
+  align-items: center; /* Vertikal centrering */
+  justify-content: center; /* Horisontell centrering (om nödvändigt) */
 }
 
 /*
